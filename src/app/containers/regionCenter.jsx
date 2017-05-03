@@ -5,11 +5,14 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import { getLocationOffices } from '../actions-generators/getLocationOffices';
 
-class Offices extends React.Component{
+class RegionCenter extends React.Component{
   render(){
+    console.log(this);
+    const offices = this.props.RegionCenterReducer.offices;
     return(
       <div>
-        <Link to="/offices/region" onClick={() => {this.props.getLocationOffices()}}>KHARKOV</Link><br/><br/>
+        <ul>{offices}</ul>
+        <Link to="/offices">[X]</Link>
       </div>
     )
   }
@@ -17,14 +20,8 @@ class Offices extends React.Component{
 
 function officesState(state) {
   return{
-    offices: state.officeReducer
+    RegionCenterReducer: state.officeReducer
   }
 }
 
-function MapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    getLocationOffices,
-  },dispatch)
-}
-
-export default connect(officesState,MapDispatchToProps)(Offices)
+export default connect(officesState)(RegionCenter)

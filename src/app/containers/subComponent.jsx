@@ -7,7 +7,6 @@ import Offices from '../containers/offices.jsx';
 
 class Subclass extends React.Component {
   render(){
-    // console.log(this);
     return(
         <div>
           <h4>This is Subclass</h4>
