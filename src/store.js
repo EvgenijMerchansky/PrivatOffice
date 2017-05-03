@@ -12,3 +12,5 @@ const middleware = applyMiddleware(promise(),thunk,logger());
 const store = createStore(reducers,composeWithDevTools(middleware));
 
 export default store
+
+// https://api.privatbank.ua/p24api/pboffice?json&city=Новая Водолага
