@@ -9,7 +9,7 @@ class Subclass extends React.Component {
   render(){
     return(
         <div>
-          <h4>This is Subclass</h4>
+          <h3>PrivatBank Search Offices</h3>
           <h1>
             <Link to="/offices">Найти отделение</Link>
           </h1>
