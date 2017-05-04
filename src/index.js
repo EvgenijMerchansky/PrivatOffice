@@ -8,11 +8,3 @@ const reducers = combineReducers({
 })
 
 export default reducers;
-
-
-// .then(function(response){
-//   console.log('individualsOffices');
-// })
-// .catch(function(error){
-//   console.warn('error!')
-// })

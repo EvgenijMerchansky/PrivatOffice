@@ -7,10 +7,7 @@ import thunk from 'redux-thunk';
 
 import reducers from './index'
 
-//,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 const middleware = applyMiddleware(promise(),thunk,logger());
 const store = createStore(reducers,composeWithDevTools(middleware));
 
 export default store
-
-// https://api.privatbank.ua/p24api/pboffice?json&city=Новая Водолага

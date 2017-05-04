@@ -9,9 +9,8 @@ class RegionCenter extends React.Component{
     const offices = this.props.RegionCenterReducer.offices;
     return(
       <div>
-        <h1>Offices in </h1>
         <ul>{offices}</ul>
-        <Link to="/offices">[X]</Link>
+        <Link to="/">[X]</Link>
       </div>
     )
   }

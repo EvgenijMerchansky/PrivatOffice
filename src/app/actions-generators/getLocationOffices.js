@@ -1,12 +1,10 @@
 import axios from 'axios';
-import store from '../../store';
-import promise from 'redux-promise-middleware';
-import thunk from 'redux-thunk';
 import React from 'react';
 
-export const getLocationOfficesKharkov = (API_URL_KH) => {
+export const getApi = (apiUrl) => {
   return function(dispatch){
-    axios.get(API_URL_KH)
+
+    axios.get(apiUrl)
     .then(response => {
       const sorteredData = response.data;
       const wrappedData = sorteredData.map((elem, index) => {
@@ -21,5 +19,3 @@ export const getLocationOfficesKharkov = (API_URL_KH) => {
     })
   }
 }
-
-// axios.get('https://api.privatbank.ua/p24api/pboffice?json&city=Новая Водолага')
